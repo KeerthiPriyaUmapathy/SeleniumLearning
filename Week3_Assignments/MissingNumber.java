@@ -9,7 +9,7 @@ import java.util.TreeSet;
 public class MissingNumber {
 
 	public static void main(String[] args) {
-		int[] data = {1,2,4,3,5,6,7,9,10};
+		int[] data = {1,2,4,3,5,6,7,9,10,11,12,13,15,17};
 		Set<Integer> data_set =new TreeSet<Integer>();
 		for(int i=0; i<data.length; i++)
 			
@@ -19,11 +19,13 @@ public class MissingNumber {
 		}
 		System.out.println("Set is " +data_set);
 		List<Integer> uniq=new ArrayList<Integer>(data_set);
-		for(int j=1; j<uniq.size()-1; j++)
+		for(int j=0; j<uniq.size(); j++)
 		{
-			if(uniq.get(j+1) != (uniq.get(j)+1))
+		
+			if(uniq.get(j) != (j+1))
 			{
-				System.out.println(j+2);
+				System.out.println(j+1);
+				break;
 			}
 			}
 				
